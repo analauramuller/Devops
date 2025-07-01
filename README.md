@@ -37,7 +37,7 @@ ssh-keygen # Não precisa preencher nenhuma opção
 
 ssh-copy-id -i <caminho da chave gerada> vagrant@<ip da maquina virtual gerada>
 
-# --------------------------------- |
+# Na pasta do ansible |
 
 ansible-playbook -i hosts install_nginx.yml
 
