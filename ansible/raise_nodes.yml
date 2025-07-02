@@ -1,0 +1,23 @@
+---
+- name: Criação do Cluster
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Criar arquivo para a configuração do Cluster
+      copy:
+        content: ""
+        dest: ./kind.yaml
+        force: no
+    - name: Configurar o Cluster
+      blockinfile:
+        path: ./kind.yaml
+        block: |
+          kind: Cluster
+          apiVersion: kind.x-k8s.io/v1alpha4
+          nodes:
+            - role: control-plane
+            - role: worker
+            - role: worker
+            - role: worker
+    - name: Inicializa o Cluster
+      ansible.builtin.command: kind create cluster --config kind.yaml --name devops
