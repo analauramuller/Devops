@@ -1,5 +1,5 @@
 ---
-- name: Instalar e configurar o Kind
+- name: Instalar o kind
   hosts: webservers
   become: yes
   tasks:

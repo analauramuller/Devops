@@ -2,3 +2,4 @@ packer
 vagrant
 debian12.box
 /.vagrant
+ansible/hosts
