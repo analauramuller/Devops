@@ -1,7 +1,7 @@
 ---
 - name: Instalando o Argocd
   hosts: webservers
-  become: yes
+  become: no
 
   tasks:
   - name: Criando o Namespace
