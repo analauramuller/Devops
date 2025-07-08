@@ -41,8 +41,8 @@ ssh-copy-id -i <caminho da chave gerada> vagrant@<ip da maquina virtual gerada>
 
 ansible-playbook -i hosts install_nginx.yml install_docker.yml install_kind.yml install_kubectl.yml
 
-ansible-playbook -i hosts raise-nodes.yml
+ansible-playbook -i hosts raise_nodes.yml
 
-ansible-playbook -i hosts start_argocd.yml
+ansible-playbook -i hosts install_argocd.yml
 
 ~~~
