@@ -45,4 +45,8 @@ ansible-playbook -i hosts raise_nodes.yml
 
 ansible-playbook -i hosts install_argocd.yml
 
+# Após ter executado todos os comandos, caso deseje hostear o argocd novamente, basta executar o seguinte comando:
+
+ansible-playbook -i hosts start_argocd.yml
+
 ~~~
